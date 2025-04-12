@@ -174,7 +174,7 @@ def prepare_model(model, mode, tokenizer=None, formatter=None, shrink_embedding=
         if mode=='unsloth_4bit':
             assert device_map is None, 'unsupported'
             from unsloth import FastLanguageModel
-            model, tokenizer = FastLanguageModel.from_pretrained(model_name=model, dtype=None, load_in_4bit=True, local_files_only=local_files_only, **kwargs)
+            model, tokenizer = FastLanguageModel.from_pretrained(report_to=None, model_name=model, dtype=None, load_in_4bit=True, local_files_only=local_files_only, **kwargs)
         elif mode in ['transformers', 'transformers_bf16', 'transformers_4bit', 'transformers_bf16_4bit', 'tokenizer_only']:
             import torch
             model_load_args = {}

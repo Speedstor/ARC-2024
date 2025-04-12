@@ -3,3 +3,6 @@ __pycache__
 .jupyter
 .venv
 input
+tmp
+unsloth_compiled_cache
+submission.json
