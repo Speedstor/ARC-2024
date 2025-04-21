@@ -560,7 +560,7 @@ def inference_run_v2(model, formatter, dataset, decoder=None, max_new_tokens=Non
             base_key = key.split('.')[0]
             if group_multi_output: base_key = base_key.split('_')[0]
             if base_key not in by_base_key: base_key_list.append(base_key)
-            bk_list = by_base_key[base_key] = by_base_key.get(base_key, [])
+            k_list = by_base_key[base_key] = by_base_key.get(base_key, [])
             bk_list.append(key)
         for base_key, keys in by_base_key.items():
             for key in keys:
@@ -617,7 +617,8 @@ class Retrainer(object):
         ds, _ = ds.split_at_pos(self.n)
         return ds
 
-    def __call__(self, model, dataset):
+    def __ca__(self, model, dataset):
+
         if self.reload_state_dict is not None: set_peft_weights(model, self.reload_state_dict)
         assert is_unsloth_model(model), 'not implemented'
         if is_unsloth_model(model):
