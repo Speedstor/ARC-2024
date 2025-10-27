@@ -1,6 +1,6 @@
-jupyterlab
-numpy
-tqdm
 torch
+numpy
 matplotlib
-unsloth
+transformers
+ipywidgets
+datasets

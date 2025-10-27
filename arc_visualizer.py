@@ -11,11 +11,6 @@ cmap = colors.ListedColormap(
      '#AAAAAA', '#F012BE', '#FF851B', '#7FDBFF', '#870C25'])
 norm = colors.Normalize(vmin=0, vmax=9)
 
-# Load original data
-arc_challenge_file = './input/arc-prize-2025/arc-agi_test_challenges.json'
-with open(arc_challenge_file, 'r') as f:
-    arc_data = json.load(f)
-
 def visualize_arc_example(train_data, test_data, task_id):
     """
     Visualize training and test data for an ARC task.
