@@ -5,6 +5,13 @@ This is a repository that takes the winning solution for ARC-2024 and strip down
 
 ## General Tips
 
+### Installation
+1. Install Nvidia Drivers: ![link](https://www.cherryservers.com/blog/install-cuda-ubuntu)
+2. Install CUDA: ![link](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=runfile_local)
+3. Install pytorch: ![link](https://pytorch.org/get-started/locally/)
+4. Install requirements.txt `pip3 install -r requirements.txt`
+4. Download Model: `./download_model.sh`
+
 ### htop for CUDA
 ```bash
 watch -n0.1 nvidia-smi
@@ -23,9 +30,3 @@ sudo apt-get --purge remove cuda
 sudo apt-get autoremove
 dpkg --list |grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
 ```
-
-### Installation
-1. Install Nvidia Drivers: ![link](https://www.cherryservers.com/blog/install-cuda-ubuntu)
-2. Install CUDA: ![link](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=runfile_local)
-3. Install pytorch: ![link](https://pytorch.org/get-started/locally/)
-4. Download Model: `./download_model.sh`
