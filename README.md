@@ -1,7 +1,7 @@
 # ARC-2024
 This is a repository that takes the winning solution for ARC-2024 and strip down the code to the absolutely minimum working parts. Simply run through `simplified.ipynb`
 
-<img src="src/image.png" width="400" style="display:block; margin: 0 auto;">
+<img src="notes/image.png" width="400" style="display:block; margin: 0 auto;">
 
 ## General Tips
 

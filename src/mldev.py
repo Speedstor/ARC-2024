@@ -80,3 +80,13 @@ def for_inference(model):
         if hasattr(embeddings, "training"): embeddings.training = False
     pass
     return model
+
+
+def mem_info(gpu_id=0):
+    import torch
+    try:
+        gpu_stats = torch.cuda.get_device_properties(gpu_id)
+        usage = torch.cuda.max_memory_reserved() / 1024**3
+        avail = gpu_stats.total_memory / 1024**3
+        print(f"*** GPU: {gpu_stats.name}, used {usage:.3} / {avail:.3} GB.")
+    except: print('*** Exception occured when getting memory stats.')
