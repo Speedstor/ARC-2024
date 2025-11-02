@@ -6,3 +6,5 @@ ipywidgets
 datasets
 bitsandbytes
 accelerate
+trl
+peft
